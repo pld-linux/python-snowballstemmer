@@ -5,11 +5,13 @@
 
 %define 	module	snowballstemmer
 Summary:	Stemmer algorithms generated from Snowball algorithms
+Summary(pl.UTF-8):	Algorytmy wyznaczające rdzeniesłów wygenerowane z algorytmów Snowball
 Name:		python-%{module}
 Version:	1.2.0
 Release:	1
 License:	BSD
 Group:		Libraries/Python
+#Source0Download: https://pypi.python.org/pypi/snowballstemmer
 Source0:	https://pypi.python.org/packages/source/s/snowballstemmer/%{module}-%{version}.tar.gz
 # Source0-md5:	51f2ef829db8129dd0f2354f0b209970
 URL:		https://github.com/shibukawa/snowball_py
@@ -26,11 +28,10 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This package provides 16 stemmer algorithms (15 + Poerter English
+This package provides 16 stemmer algorithms (15 + Porter English
 stemmer) generated from Snowball algorithms.
 
 It includes following language algorithms:
-
  - Danish
  - Dutch
  - English (Standard, Porter)
@@ -50,13 +51,38 @@ It includes following language algorithms:
 This is a pure Python stemming library. If PyStemmer is available,
 this module uses it to accelerate.
 
+%description -l pl.UTF-8
+Ten pakiet udostępnia 16 algorytmów znajdujących rdzenie słów (15 +
+angielski Portera), wygenerowane z algorytmów Snowball.
+
+Zawiera algorytmy dla następujących języków:
+ - duński
+ - holenderski
+ - angielski (standardowy i Portera)
+ - fiński
+ - francuski
+ - niemiecki
+ - węgierski
+ - włoski
+ - norweski
+ - portugalski
+ - rumuński
+ - rosyjski
+ - hiszpański
+ - szwedzki
+ - turecki
+
+Ta biblioteka jest napisana w czystym Pythonie. Jeśli dostępny jest
+PyStemmer, jest używany w celu przyspieszenia.
+
 %package -n python3-%{module}
 Summary:	Stemmer algorithms generated from Snowball algorithms
+Summary(pl.UTF-8):	Algorytmy wyznaczające rdzeniesłów wygenerowane z algorytmów Snowball
 Group:		Libraries/Python
 Requires:	python3-modules
 
 %description -n python3-%{module}
-This package provides 16 stemmer algorithms (15 + Poerter English
+This package provides 16 stemmer algorithms (15 + Porter English
 stemmer) generated from Snowball algorithms.
 
 It includes following language algorithms:
@@ -79,6 +105,30 @@ It includes following language algorithms:
 
 This is a pure Python stemming library. If PyStemmer is available,
 this module uses it to accelerate.
+
+%description -n python3-%{module} -l pl.UTF-8
+Ten pakiet udostępnia 16 algorytmów znajdujących rdzenie słów (15 +
+angielski Portera), wygenerowane z algorytmów Snowball.
+
+Zawiera algorytmy dla następujących języków:
+ - duński
+ - holenderski
+ - angielski (standardowy i Portera)
+ - fiński
+ - francuski
+ - niemiecki
+ - węgierski
+ - włoski
+ - norweski
+ - portugalski
+ - rumuński
+ - rosyjski
+ - hiszpański
+ - szwedzki
+ - turecki
+
+Ta biblioteka jest napisana w czystym Pythonie. Jeśli dostępny jest
+PyStemmer, jest używany w celu przyspieszenia.
 
 %prep
 %setup -q -n %{module}-%{version}
