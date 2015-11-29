@@ -16,7 +16,7 @@ Source0:	https://pypi.python.org/packages/source/s/snowballstemmer/%{module}-%{v
 # Source0-md5:	51f2ef829db8129dd0f2354f0b209970
 URL:		https://github.com/shibukawa/snowball_py
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.219
+BuildRequires:	rpmbuild(macros) >= 1.710
 %if %{with python2}
 BuildRequires:	python-setuptools
 %endif
