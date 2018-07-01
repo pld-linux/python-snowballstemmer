@@ -8,7 +8,7 @@ Summary:	Stemmer algorithms generated from Snowball algorithms
 Summary(pl.UTF-8):	Algorytmy wyznaczające rdzeniesłów wygenerowane z algorytmów Snowball
 Name:		python-%{module}
 Version:	1.2.1
-Release:	1
+Release:	2
 License:	BSD
 Group:		Libraries/Python
 #Source0Download: https://pypi.python.org/pypi/snowballstemmer
