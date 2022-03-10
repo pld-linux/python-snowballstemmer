@@ -7,13 +7,13 @@
 Summary:	Stemmer algorithms generated from Snowball algorithms
 Summary(pl.UTF-8):	Algorytmy wyznaczające rdzeniesłów wygenerowane z algorytmów Snowball
 Name:		python-%{module}
-Version:	2.0.0
-Release:	2
+Version:	2.2.0
+Release:	1
 License:	BSD
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/snowballstemmer
 Source0:	https://files.pythonhosted.org/packages/source/s/snowballstemmer/%{module}-%{version}.tar.gz
-# Source0-md5:	c05ec4a897be3c953c8b8b844c4241d4
+# Source0-md5:	4332ddc7bbee0f344a03915b2ad59a54
 URL:		https://github.com/snowballstem/snowball
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
@@ -202,7 +202,7 @@ rm -rf $RPM_BUILD_ROOT
 %if %{with python2}
 %files
 %defattr(644,root,root,755)
-%doc CHANGES.rst COPYING README.rst
+%doc COPYING NEWS README.rst
 %{py_sitescriptdir}/%{module}
 %{py_sitescriptdir}/%{module}-%{version}-py*.egg-info
 %endif
@@ -210,7 +210,7 @@ rm -rf $RPM_BUILD_ROOT
 %if %{with python3}
 %files -n python3-%{module}
 %defattr(644,root,root,755)
-%doc CHANGES.rst COPYING README.rst
+%doc COPYING NEWS README.rst
 %{py3_sitescriptdir}/%{module}
 %{py3_sitescriptdir}/%{module}-%{version}-py*.egg-info
 %endif
